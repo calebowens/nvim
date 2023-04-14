@@ -1,0 +1,9 @@
+{
+  "copilot.vim": { "branch": "release", "commit": "b6e5624351ba735e25eb8864d7d22819aad00606" },
+  "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
+  "nofrils": { "branch": "master", "commit": "bad6e490846e098866136ef20fff31e99f428bb9" },
+  "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
+  "telescope.nvim": { "branch": "master", "commit": "6258d50b09f9ae087317e392efe7c05a7323492d" },
+  "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
+  "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" }
+}
