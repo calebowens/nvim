@@ -40,3 +40,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Netrw configuration
 vim.g.netrw_liststyle = 3
+
+-- DOWN WITH THE MOUSE
+vim.opt.mouse = nil
