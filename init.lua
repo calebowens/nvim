@@ -13,6 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set vim leader key to space
+-- Still not convinced about this one
 vim.g.mapleader = " "
 
 -- Set plugins for lazy to install
@@ -24,7 +25,8 @@ require("lazy").setup({
   },
   "tpope/vim-sleuth",
   "github/copilot.vim",
-  "tpope/vim-vinegar"
+  "tpope/vim-vinegar",
+  "m4xshen/hardtime.nvim"
 })
 
 -- Set colorscheme
@@ -38,8 +40,19 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
--- Netrw configuration
-vim.g.netrw_liststyle = 3
-
 -- DOWN WITH THE MOUSE
 vim.opt.mouse = nil
+
+-- Make haml files easier to read
+vim.opt.cursorcolumn = true
+vim.opt.cursorline = true
+
+-- line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- Keep cursor from bashing into the side of the window
+vim.opt.scrolloff = 5
+
+-- Never have it easy!
+require("hardtime").setup()
