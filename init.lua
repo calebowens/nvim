@@ -54,22 +54,6 @@ vim.opt.relativenumber = true
 -- Keep cursor from bashing into the side of the window
 vim.opt.scrolloff = 5
 
--- Never have it easy!
-local hardtime_config = {
-   max_time = 1000,
-   max_count = 2,
-   disable_mouse = true,
-   hint = true,
-   allow_different_key = false,
-   resetting_keys = { "1", "2", "3", "4", "5", "6", "7", "8", "9",
-      "c", "C", "d", "x", "X", "y", "Y", "p", "P" },
-   restricted_keys = { "h", "j", "k", "l", "+", "gj", "gk" },
-   hint_keys = { "k", "j", "^", "$", "a", "i", "d", "y", "c", "l" },
-   disabled_keys = { "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>" },
-   disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason" }
-}
--- require("hardtime").setup(hardtime_config)
-
 -- Vinegar but less
 vim.keymap.set('n', '-', '<cmd>Ex<cr>', {})
 vim.g.netrw_banner = 0
