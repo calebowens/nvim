@@ -18,19 +18,19 @@ vim.g.mapleader = " "
 
 -- Set plugins for lazy to install
 require("lazy").setup({
-  "robertmeta/nofrils",
+  -- "robertmeta/nofrils",
+  "morhetz/gruvbox",
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   "tpope/vim-sleuth",
-  "github/copilot.vim",
-  "tpope/vim-vinegar",
-  "m4xshen/hardtime.nvim"
+  -- "tpope/vim-vinegar",
+  -- "m4xshen/hardtime.nvim"
 })
 
 -- Set colorscheme
-vim.cmd.colorscheme("nofrils-acme")
+vim.cmd.colorscheme("gruvbox")
 
 -- Nvim Telescope
 local builtin = require('telescope.builtin')
@@ -55,4 +55,21 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 5
 
 -- Never have it easy!
-require("hardtime").setup()
+local hardtime_config = {
+   max_time = 1000,
+   max_count = 2,
+   disable_mouse = true,
+   hint = true,
+   allow_different_key = false,
+   resetting_keys = { "1", "2", "3", "4", "5", "6", "7", "8", "9",
+      "c", "C", "d", "x", "X", "y", "Y", "p", "P" },
+   restricted_keys = { "h", "j", "k", "l", "+", "gj", "gk" },
+   hint_keys = { "k", "j", "^", "$", "a", "i", "d", "y", "c", "l" },
+   disabled_keys = { "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>" },
+   disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason" }
+}
+-- require("hardtime").setup(hardtime_config)
+
+-- Vinegar but less
+vim.keymap.set('n', '-', '<cmd>Ex<cr>', {})
+vim.g.netrw_banner = 0
